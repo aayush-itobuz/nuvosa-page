@@ -1,26 +1,51 @@
-/* By Athlon Front-End Team */
+// bootstrap
+@import '~bootstrap/scss/bootstrap';
 
-/* Core variables */
+// Core variables
 @import 'base/vars';
 
-/* CSS Reset */
-@import 'base/reset';
+// extend class
+@import 'base/extend';
 
-/* CSS print */
-@import 'base/print';
+// header section
+@import 'base/header';
 
-/* Fonts */
-@import 'base/fonts';
+// hero section
+@import 'base/hero';
 
-/* Mixins, helpers and functions */
-@import 'base/mixins';
+// service section
+@import 'base/service';
 
-/* Vendor */
+* {
+  box-sizing: border-box;
+}
 
-/* Components */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', serif;
+}
 
-/* Browser specific styles */
-@import 'dirty/hacks';
+.optimise {
 
-/* Demo Page styles */
-@import 'demo';
+  .optimise-heading {
+    @extend %section-heading;
+  }
+
+  .optimise-sub-heading {
+    color: $muted-gray;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .optimise-card-img {
+    margin: 1rem;
+  }
+}
+
+
+
+
+
+
+

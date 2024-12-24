@@ -1,0 +1,87 @@
+.header {
+
+  @media (min-width: 1920px) {
+    padding: 57px 127px;
+  }
+
+  .company-name {
+    color: $black;
+    margin-top: 8px;
+  }
+
+  .header-hamburger {
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .header-item {
+    a {
+      color: $black;
+    }
+
+    @media (min-width: 1920px) {
+      padding-left: 118px;
+    }
+
+    .nav-content {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        background-color: #6f77f1;
+        transition: transform 0.25s ease-out;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      a {
+        @media (min-width: 1440px) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .header-btn-talk {
+    border-color: $black;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+
+    @media (min-width: 1366px) {
+      font-size: 20px;
+      padding: 10px 20px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 24px;
+    }
+
+    @media (min-width: 1920px) {
+      padding: 20px 48px;
+      border-width: 2px;
+    }
+  }
+
+  .header-btn-search {
+    background-color: $yellow;
+    border: none;
+
+    @media (min-width: 1920px) {
+      padding-left: 24px;
+    }
+
+    &:hover {
+      background-color: $dark-yellow;
+    }
+  }
+}
